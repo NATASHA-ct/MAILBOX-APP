@@ -1,4 +1,5 @@
 require("dotenv").config();
+const bodyParser = require("body-parser");
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -6,6 +7,7 @@ const mailRoutes = require("./routes/messages");
 
 // express app
 const app = express();
+app.use(bodyParser.json());
 
 // middleware
 app.use((req, res, next) => {
