@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const express = require("express");
+const mailRoutes = require("./routes/messages");
 
 // express app
 const app = express();
@@ -11,10 +12,9 @@ app.use((req, res, next) => {
   next();
 });
 
-// routes handler
-app.get("/", (req, res) => {
-  res.json({ mssg: "Welcome to the app" });
-});
+
+// routes
+app.use('/api/messages', mailRoutes)
 
 // listen for requests
 app.listen(process.env.PORT, () => {
