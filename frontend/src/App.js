@@ -1,10 +1,10 @@
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 
 // impports for pages and components
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 import Navbar from './components/Navbar';
-// import Inbox from './pages/Inbox';
-// import Message from './pages/Message';
+import Inbox from './pages/Inbox/Inbox';
+import Message from './pages/Message/Message';
 
 function App() {
   return (
@@ -13,8 +13,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/" element={<Inbox />} />
-          <Route path="/" element={<Message />} /> */}
+          <Route exact path="/Inbox" element={<Inbox />} />
+          <Route path="/message/:id" element={<Message />} />
         </Routes>
       </BrowserRouter>
     </div>

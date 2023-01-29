@@ -1,0 +1,12 @@
+.homepage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toInbox{
+    margin-top: 2em;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(3, 85, 133);
+}
