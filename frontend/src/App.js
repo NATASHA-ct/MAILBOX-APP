@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route exact path="/Inbox" element={<Inbox />} />
-          <Route path="/message/:id" element={<Message />} />
+          <Route path="/messages/:id" element={<Message />} />
         </Routes>
       </BrowserRouter>
     </div>

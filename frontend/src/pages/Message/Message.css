@@ -1,0 +1,11 @@
+.msg-subject{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: rgb(3, 85, 133);
+}
+
+.msg-content{
+    font-size: 1em;
+    font-style: italic;
+}
