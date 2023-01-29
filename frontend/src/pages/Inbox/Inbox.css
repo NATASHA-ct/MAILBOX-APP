@@ -40,11 +40,11 @@ a{
 }
 
 .unread::before {
-  background-color: #1bc85b;
+  background-color: #129e43;
   font-family: "Font Awesome 5 Free";
   content: "\e16f"; 
   border-radius: 50%;
-  color: #1bc85b; 
-  font-size: 15px; 
+  color: #129e43; 
+  font-size: 13px; 
   margin-top:1em; 
 }
