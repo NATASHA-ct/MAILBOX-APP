@@ -27,11 +27,11 @@ const getMessage = async (req, res) => {
 
 // create a new message
 const createMessage = async (req, res) => {
-  const { title, load, reps } = req.body;
+  const { subject, content, isRead } = req.body;
 
   // add to the database
   try {
-    const message = await Message.create({ title, load, reps });
+    const message = await Message.create({ subject, content, isRead });
     res.status(200).json(message);
   } catch (error) {
     res.status(400).json({ error: error.message });

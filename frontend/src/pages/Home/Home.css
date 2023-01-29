@@ -1,0 +1,42 @@
+.homepage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toInbox button {
+    background: #5a84a3;
+    border: 2px solid #02121f2e;
+    padding: 0.5em;
+    border-radius: 26px;
+    margin-top: 2em;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: rgb(3, 85, 133);
+}
+
+.toInbox button:hover {
+    background: #075786;
+    color: #0390cc;
+}
+
+.unreadMsg{
+  font-size: 1.2em;
+  color:#771e63
+}
+
+.unreadMsg {
+    margin: 1rem auto;
+    animation: neon 1s ease infinite;
+}
+@keyframes unreadMsg {
+    0%,
+    100% {
+        text-shadow: 0 0 10px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 2px #fed128, 2px 2px 2px #806914;
+        color: #f5efcb;
+    }
+    50% {
+        text-shadow: 0 0 2px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 2px #800e0b, 4px 4px 2px #40340a;
+        color: #eda0d3;
+    }
+}

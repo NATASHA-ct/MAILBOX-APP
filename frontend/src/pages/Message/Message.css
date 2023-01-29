@@ -1,0 +1,22 @@
+.msg-container{
+    width: 70%;
+    margin-top: 12em; 
+    text-align: left; 
+}
+
+.subject{
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    color: rgb(3, 85, 133);
+}
+
+.content{
+    font-size: 1.3em;
+    padding: 2.5em 1em;
+    font-style: italic;
+    border: 1px solid #035585;
+    border-radius: 5px;
+    background-color: #a2cae7;
+    box-shadow: 0 0 5px #035585;
+}

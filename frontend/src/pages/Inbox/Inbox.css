@@ -1,0 +1,50 @@
+.pageTittle{
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.msgs-container{
+    border: 2px solid #7d8e9d;
+    border-radius: 5px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    padding-left:2em;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.msg-subject{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: rgb(3, 85, 133);
+}
+
+.msg-content{
+    font-size: 1em;
+    font-style: italic;
+}
+
+.unread{
+  font-weight: bold;
+  color: #b6bdc5;
+}
+
+.unread h3{
+    color: rgb(98, 142, 176);
+}
+
+.unread::before {
+  background-color: #129e43;
+  font-family: "Font Awesome 5 Free";
+  content: "\e16f"; 
+  border-radius: 50%;
+  color: #129e43; 
+  font-size: 13px; 
+  margin-top:1em; 
+}

@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background: #5a84a3;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav a{
+  color: var(--primary);
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+nav a:hover{
+  color: #fff;
+}
+
+.logo{
+    display: flex;
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    color: rgb(1, 22, 33);
+}
