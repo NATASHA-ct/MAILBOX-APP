@@ -3,40 +3,39 @@ import { Link } from "react-router-dom";
 import { FiMail } from "react-icons/fi";
 import { CSSTransition } from "react-transition-group";
 import "./Home.css";
-// import axios from "axios";
-
 
 const Home = () => {
+  const [messages, setMessages] = useState(null);
+  const [unreadMsg, setUnreadMsg] = useState(0);
 
-     const [messages, setMessages] = useState(null);
+  useEffect(() => {
+    const fetchMessages = async () => {
+      const response = await fetch("/api/messages");
+      const json = await response.json();
 
-     useEffect(() => {
-       const fetchMessages = async () => {
-         const response = await fetch("/api/messages");
-         const json = await response.json();
+      if (response.ok) {
+        setMessages(json);
+        setUnreadMsg(json.filter((message) => !message.isRead).length);
+      }
+    };
 
-         if (response.ok) {
-           setMessages(json);
-         }
-       };
-
-       fetchMessages();
-     }, []);
+    fetchMessages();
+  }, []);
 
   return (
     <CSSTransition in={true} timeout={300}>
       <div className="homepage page">
-        <h1>
-          <FiMail />
-        </h1>
-        <h2>Hello PERSON</h2>
-        <p>You have 3 unread messages out of 10</p>
+        <h1>Hello Person</h1>
+        <p className="unreadMsg">
+          <FiMail />You have {unreadMsg || 0} unread messages out of{" "}
+          {messages?.length || 0}          
+        </p>
         <Link to="/Inbox" className="toInbox">
           <button>View Messages</button>
         </Link>
       </div>
     </CSSTransition>
   );
-}
+};
 
-export default Home
+export default Home;

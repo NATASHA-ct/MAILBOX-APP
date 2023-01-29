@@ -29,3 +29,22 @@ a{
     font-size: 1em;
     font-style: italic;
 }
+
+.unread{
+  font-weight: bold;
+  color: #b6bdc5;
+}
+
+.unread h3{
+    color: rgb(98, 142, 176);
+}
+
+.unread::before {
+  background-color: #1bc85b;
+  font-family: "Font Awesome 5 Free";
+  content: "\e16f"; 
+  border-radius: 50%;
+  color: #1bc85b; 
+  font-size: 15px; 
+  margin-top:1em; 
+}

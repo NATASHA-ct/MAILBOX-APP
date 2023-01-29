@@ -12,7 +12,6 @@ const Navbar = () => {
       </h1>
       <div className="links">
         <Link to="/">Home</Link>
-        <Link to="/">Unread Mails: 3</Link>
         <Link to="/Inbox">Inbox</Link>
       </div>
     </nav>
