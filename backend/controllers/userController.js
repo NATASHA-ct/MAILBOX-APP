@@ -1,14 +1,13 @@
-const express = require("express");
+const User = require("../models/userModel");
 
-// controller functions
-const { loginUser, signupUser } = require("../controllers/userController");
+// login a user
+const loginUser = async (req, res) => {
+  res.json({ mssg: "login user" });
+};
 
-const router = express.Router();
+// signup a user
+const signupUser = async (req, res) => {
+  res.json({ mssg: "signup user" });
+};
 
-// login route
-router.post("/login", loginUser);
-
-// signup route
-router.post("/signup", signupUser);
-
-module.exports = router;
+module.exports = { signupUser, loginUser };
