@@ -24,9 +24,9 @@ const Message = () => {
   }
 
   return (
-    <div className="single-mesg page">
-      <h3 className="msg-subject">{message.subject}</h3>
-      <p className="msg-content">{message.content}</p>
+    <div className="msg-container">
+      <h3 className="subject">{message.subject}</h3>
+      <p className="content">{message.content}</p>
     </div>
   );
 };
