@@ -58,7 +58,9 @@ const Inbox = () => {
                 >
                   <div className="single-mesg" key={message._id}>
                     <h3 className="msg-subject">{message.subject}</h3>
-                    <p className="msg-content">{message.content}</p>
+                    <p className="msg-content">
+                      {message.content.substr(0, 25)}. . . . .
+                    </p>
                   </div>
                 </Link>
               </div>
