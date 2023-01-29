@@ -6,6 +6,9 @@
   --primary: #133146;
   --error: #81072e;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: #94b2c9;
   margin: 0;
@@ -27,3 +30,22 @@ body {
   padding-bottom: 8em;
   margin-top: 9em;
 }
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 100ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 100ms ease-in;
+}
+

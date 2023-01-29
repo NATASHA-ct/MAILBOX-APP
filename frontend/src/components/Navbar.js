@@ -1,5 +1,7 @@
 import { FiMail } from "react-icons/fi";
-import "./Navbar.css"
+import "./Navbar.css";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   return (
@@ -9,9 +11,9 @@ const Navbar = () => {
         MAILBOX
       </h1>
       <div className="links">
-        <a href="/">Home</a>
-        <a href="/">Unread Mails: 3</a>
-        <a href="/Inbox">Inbox</a>
+        <Link to="/">Home</Link>
+        <Link to="/">Unread Mails: 3</Link>
+        <Link to="/Inbox">Inbox</Link>
       </div>
     </nav>
   );

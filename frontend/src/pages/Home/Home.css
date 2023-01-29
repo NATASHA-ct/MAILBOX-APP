@@ -4,9 +4,18 @@
   align-items: center;
 }
 
-.toInbox{
+.toInbox button {
+    background: #5a84a3;
+    border: 2px solid #02121f2e;
+    padding: 0.5em;
+    border-radius: 26px;
     margin-top: 2em;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
     color: rgb(3, 85, 133);
+}
+
+.toInbox button:hover {
+    background: #075786;
+    color: #0390cc;
 }
