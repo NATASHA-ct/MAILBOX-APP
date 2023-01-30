@@ -27,3 +27,8 @@ nav a:hover{
     font-size: 2rem;
     color: rgb(1, 22, 33);
 }
+
+.links{
+  display: flex;
+  align-items: center;
+}

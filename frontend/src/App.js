@@ -5,6 +5,8 @@ import Home from './pages/Home/Home';
 import Navbar from './components/Navbar';
 import Inbox from './pages/Inbox/Inbox';
 import Message from './pages/Message/Message';
+import Login from "./pages/Login/Login";
+import Signup from "./pages/Signup/Signup";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route exact path="/Inbox" element={<Inbox />} />
           <Route path="/messages/:id" element={<Message />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </BrowserRouter>
     </div>
