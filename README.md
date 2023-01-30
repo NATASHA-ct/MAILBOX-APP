@@ -93,20 +93,16 @@ $ npm run start
 ### Deployment
 
 You can deploy this project using:
-
-<!--
-Example:
-
-```sh
+```
+render
 
 ```
- -->
-
+<!--
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
+< AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
 
 👤 **NATASHA TATENDA CHIROMBE**
 
@@ -114,7 +110,3 @@ Example:
 - Twitter: [@NatashaChirombe]
 - LinkedIn: [Natasha Chirombe](linkedin.com/in/natasha-chirombe-1531aa17b)
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<
