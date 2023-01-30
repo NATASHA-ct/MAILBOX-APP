@@ -55,6 +55,8 @@ const Inbox = () => {
    <CSSTransition in={true} timeout={300}>
      <div className="Inboxpage page">
        <h2 className="pageTittle">INBOX</h2>
+       
+       {/* Authorisation to allow only predefined user to inbox access */}
 
        {user.email === "admin@gmail.com" ? (
          messages &&
