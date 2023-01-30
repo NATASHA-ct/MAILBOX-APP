@@ -7,7 +7,15 @@ const loginUser = async (req, res) => {
 
 // signup a user
 const signupUser = async (req, res) => {
-  res.json({ mssg: "signup user" });
+   const { username, password } = req.body;
+
+   try {
+     const user = await User.signup(username, password);
+
+     res.status(200).json({ username, user });
+   } catch (error) {
+     res.status(400).json({ error: error.message });
+   }
 };
 
 module.exports = { signupUser, loginUser };
