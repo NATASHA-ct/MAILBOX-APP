@@ -2,13 +2,19 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Inbox.css";
 import { CSSTransition } from "react-transition-group";
+import { useAuthContext } from "../../hooks/useAuthContext";
 
 const Inbox = () => {
   const [messages, setMessages] = useState(null);
+  const { user } = useAuthContext();
 
   useEffect(() => {
     const fetchMessages = async () => {
-      const response = await fetch("/api/messages");
+      const response = await fetch("/api/messages", {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      });
       const json = await response.json();
 
       if (response.ok) {
@@ -16,8 +22,10 @@ const Inbox = () => {
       }
     };
 
-    fetchMessages();
-  }, []);
+    if (user) {
+      fetchMessages();
+    }
+  }, [user]);
 
   
     const handleMarkAsRead = async (messageId) => {

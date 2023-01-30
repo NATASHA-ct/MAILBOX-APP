@@ -26,11 +26,13 @@ nav a:hover{
     font-family: 'VT323', monospace;
     font-size: 2rem;
     color: rgb(1, 22, 33);
+    margin-left: 15px;
 }
 
 .links{
   display: flex;
   align-items: center;
+  margin-right: 27px;
 }
 
 nav button {
