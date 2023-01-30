@@ -33,13 +33,20 @@ const Home = () => {
     <CSSTransition in={true} timeout={300}>
       {user ? (
         <div className="homepage page">
-          <h1>Hello Person</h1>
-          <p className="unreadMsg">
-            You have {unreadMsg || 0} unread messages out of{" "}
-            {messages?.length || 0}
-          </p>
+          <h1 className="helloTxt">Hello {user.name}! Welcome to MAILBOX</h1>
+          
+              {user.email === "admin@gmail.com" ? (
+                <p className="unreadMsg">
+                  You have {unreadMsg || 0} unread messages out of{" "}{messages?.length || 0}
+                </p>
+              ) : (
+                  <p className="unreadMsg">
+                      You have no messages
+                  </p>
+              )}
+          
           <Link to="/Inbox" className="toInbox">
-            <button>View Messages</button>
+            <button className="btn">View Messages</button>
           </Link>
         </div>
       ) : (

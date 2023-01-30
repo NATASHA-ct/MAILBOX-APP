@@ -51,32 +51,38 @@ const Inbox = () => {
       }
     };
 
-    return (
-      <CSSTransition in={true} timeout={300}>
-        <div className="Inboxpage page">
-          <h2 className="pageTittle">INBOX</h2>
-          {messages &&
-            messages.map((message) => (
-              <div className="msgs-container">
-                <Link
-                  to={`/messages/${message._id}`}
-                  key={message._id}
-                  className={message.isRead ? "" : "unread"}
-                  onClick={() => handleMarkAsRead(message._id)}
-                >
-                  <div className="single-mesg" key={message._id}>
-                    <h3 className="msg-subject">{message.subject}</h3>
-                    <p className="msg-content">
-                      {message.content.substr(0, 25)}. . . . .
-                    </p>
-                  </div>
-                </Link>
-              </div>
-            ))}
-        </div>
-      </CSSTransition>
-    );
-  };
+ return (
+   <CSSTransition in={true} timeout={300}>
+     <div className="Inboxpage page">
+       <h2 className="pageTittle">INBOX</h2>
+
+       {user.email === "admin@gmail.com" ? (
+         messages &&
+         messages.map((message) => (
+           <div className="msgs-container">
+             <Link
+               to={`/messages/${message._id}`}
+               key={message._id}
+               className={message.isRead ? "" : "unread"}
+               onClick={() => handleMarkAsRead(message._id)}
+             >
+               <div className="single-mesg" key={message._id}>
+                 <h3 className="msg-subject">{message.subject}</h3>
+                 <p className="msg-content">
+                   {message.content.substr(0, 25)}. . . . .
+                 </p>
+               </div>
+             </Link>
+           </div>
+         ))
+       ) : (
+         <h3 className="noView">Sorry you cannot view these messages</h3>
+       )}
+     </div>
+   </CSSTransition>
+ );
+ };
 
 
 export default Inbox;
+     
