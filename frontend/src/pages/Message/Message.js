@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./Message.css";
-
+import { useAuthContext } from "../../hooks/useAuthContext";
 
 
 const Message = () => {
   const [message, setMessage] = useState(null);
   const { id } = useParams();
-
+  const { user } = useAuthContext();
+  
   useEffect(() => {
     const fetchMessage = async () => {
-      const response = await fetch(`/api/messages/${id}`);
+      const response = await fetch(`/api/messages/${id}`, {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      });
       const json = await response.json();
 
       if (response.ok) {
@@ -18,8 +23,11 @@ const Message = () => {
       }
     };
 
-    fetchMessage();
-  }, [id]);
+    if (user) {
+      fetchMessage();
+    }
+  }, [id,user]);
+
 
   if (!message) {
     return <div>Loading...</div>;

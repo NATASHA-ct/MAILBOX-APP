@@ -25,7 +25,10 @@ function App() {
             path="/Inbox"
             element={user ? <Inbox /> : <Navigate to="/login" />}
           />
-          <Route path="/messages/:id" element={<Message />} />
+          <Route
+            path="/messages/:id"
+            element={user ? <Message /> : <Navigate to="/login" />}
+          />
           <Route
             path="/login"
             element={!user ? <Login /> : <Navigate to="/" />}
