@@ -32,3 +32,14 @@ nav a:hover{
   display: flex;
   align-items: center;
 }
+
+nav button {
+  background:var(--primary);
+  color: aliceblue;
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+}
