@@ -7,7 +7,11 @@ const {
   updateMessage,
 } = require("../controllers/messageController");
 
+const requireAuth = require("../middleware/requireAuth");
 const router = express.Router();
+
+// require auth to view data 
+router.use(requireAuth)
 
 // GET all Messages
 router.get("/", getMessages);
