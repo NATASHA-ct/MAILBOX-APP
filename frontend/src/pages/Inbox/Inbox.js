@@ -27,29 +27,29 @@ const Inbox = () => {
     }
   }, [user]);
 
-  
-    const handleMarkAsRead = async (messageId) => {
-      try {
-        const response = await fetch(`/api/messages/${messageId}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ isRead: true }),
-        });
-        const json = await response.json();
+  const handleMarkAsRead = async (messageId) => {
+  try {
+    const response = await fetch(`/api/messages/${messageId}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${user.token}`,
+      },
+      body: JSON.stringify({ isRead: true }),
+    });
+    const json = await response.json();
 
-        if (response.ok) {
-          setMessages((prevMessages) =>
-            prevMessages.map((message) =>
-              message._id === messageId ? json : message
-            )
-          );
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    };
+    if (response.ok) {
+      setMessages((prevMessages) =>
+        prevMessages.map((message) =>
+          message._id === messageId ? json : message
+        )
+      );
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
 
  return (
    <CSSTransition in={true} timeout={300}>
