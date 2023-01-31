@@ -5,6 +5,10 @@
 **[MAILBOX]** is a...
 
 ## 🛠 Built With <a name="built-with"></a>
+- MongoDB
+- Expres.js
+- React
+- Node.js
 
 
 ### Key Features <a name="key-features"></a>
