@@ -1,2 +1,3 @@
-node_modules
-# "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Q4MjhjNjQwYWRiY2VlOTA0OTc3NWEiLCJpYXQiOjE2NzUxMTkzNTQsImV4cCI6MTY3NTM3ODU1NH0.rBH9mi3OHOR8Z5hMm901atoYxPS7v_TipIstNnnpTVE"
+**/node_modules
+./backend/.env
+
