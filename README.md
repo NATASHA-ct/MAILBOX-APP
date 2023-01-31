@@ -2,7 +2,7 @@
 
 >
 
-**[MAILBOX]** is a...
+**[MAILBOX]** is a mail inbox fullstack application built using React.js and Node.js. The app allows users to view their email messages and the app marks the opened messages as read. The app implements an API layer to fetch and update message data stored in a database. The top bar of the app indicates the number of unread messages and the name of the user. The app is styled using CSS. The app uses a predefined user and only shows messages for that user and to that user.
 
 ## 🛠 Built With <a name="built-with"></a>
 - MongoDB
