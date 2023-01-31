@@ -27,8 +27,6 @@ features:
 6. Text on homepage telling the user the number of unread messages they have
 
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
 
 ## API DOCUMENTATION
 click link below
