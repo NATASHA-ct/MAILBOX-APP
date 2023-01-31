@@ -27,7 +27,8 @@ features:
 
 
 ## API DOCUMENTATION
-
+click link below
+https://documenter.getpostman.com/view/25553859/2s935isRVZ
 
 ### Prerequisites
 
@@ -92,7 +93,7 @@ $ npm run start
 
 ### Deployment
 
-You can deploy this project using:
+To be deployed
 ```
 render
 
