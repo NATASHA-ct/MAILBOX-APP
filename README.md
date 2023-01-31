@@ -99,7 +99,7 @@ $ npm run start
 
 To be deployed
 ```
-render
+using render
 
 ```
 <!--
